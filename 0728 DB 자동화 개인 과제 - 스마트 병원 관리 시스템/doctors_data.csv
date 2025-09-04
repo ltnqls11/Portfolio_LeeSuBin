@@ -1,0 +1,6 @@
+id,name,specialty,license_num,phone,email,work_hours,experience_years,education
+1,김재현,물리치료,PT-2018-001,010-1111-2222,kim.jaehyun@hospital.com,09:00-18:00,6,연세대학교 물리치료학과
+2,박소영,정형외과,MD-2015-045,010-2222-3333,park.soyoung@hospital.com,08:00-17:00,9,서울대학교 의과대학
+3,이동훈,재활의학과,MD-2017-023,010-3333-4444,lee.donghoon@hospital.com,10:00-19:00,7,고려대학교 의과대학
+4,최민정,도수치료,PT-2019-012,010-4444-5555,choi.minjeong@hospital.com,09:00-18:00,5,경희대학교 물리치료학과
+5,정우성,스포츠의학,MD-2016-078,010-5555-6666,jung.woosung@hospital.com,14:00-22:00,8,성균관대학교 의과대학

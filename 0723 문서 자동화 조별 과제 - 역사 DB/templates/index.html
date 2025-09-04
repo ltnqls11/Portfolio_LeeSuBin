@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>한국사 주요 사건 대시보드</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; padding: 20px; background: #f4f4f4; }
+        h1 { color: #2c3e50; }
+        table { width: 100%; border-collapse: collapse; background: white; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        th, td { padding: 10px; border: 1px solid #ccc; text-align: left; }
+        tr.today { background-color: #fffae6; }
+        .highlight { color: red; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>📅 한국사 주요 사건 대시보드</h1>
+    <p>오늘 날짜: <span class="highlight">{{ today }}</span></p>
+
+    {% if today_events %}
+        <h2>✨ 오늘은 이런 일이 있었습니다!</h2>
+        <ul>
+            {% for e in today_events %}
+                <li><strong>{{ e["event"] }}</strong>: {{ e["description"] }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>오늘은 등록된 사건이 없습니다.</p>
+    {% endif %}
+
+    <h2>🗂 전체 사건 목록</h2>
+    <table>
+        <thead>
+            <tr><th>사건</th><th>날짜</th><th>설명</th></tr>
+        </thead>
+        <tbody>
+            {% for e in events %}
+                <tr class="{% if e.is_today %}today{% endif %}">
+                    <td>{{ e["event"] }}</td>
+                    <td>{{ e["date"] }}</td>
+                    <td>{{ e["description"] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,9 @@
+try:
+response = requests.get(url, params=params)
+print(response.text) # 여기에 찍히는 XML 확인
+root = ET.fromstring(response.content)
+prices = []
+
+XML 내용 예시
+
+<response> <header> <resultCode>00</resultCode> <resultMsg>NORMAL SERVICE.</resultMsg> </header> <body> <items> <item> <거래금액> 85,000 </거래금액> ... </item> </items> </body> </response>
